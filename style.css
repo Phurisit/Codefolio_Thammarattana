@@ -1,0 +1,95 @@
+:root {
+    --blue: #2c5f8a;
+    --text: #000000;
+    --paper:#f5f73d;
+}
+
+body {
+    font-family: "Noto Sans Thai" , sans-serif;
+    color:var(--text);
+    background: #fff;
+    line-height: 1.7;
+} 
+.profile {
+    background:#fff;
+    border-bottom: 6px solid #ffee7c54;
+    padding: 1rem 0 ;
+    background: rgb(255, 255, 255);
+}.profile-photo {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px;
+    border-style: double;
+    box-shadow: 0 10px 20px 2px rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+}
+.profile-name {
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.Arch-photo1 {
+    width: 1000px;
+    height: 650px;
+    padding: 100px;
+    padding-bottom: 20px;
+}
+.งานที่ทำ {
+    font-weight: bold;
+}
+.profile-sub {
+    color: #110071;
+    font-weight: 500px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.profile-info {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem 1.25rem;
+}
+.MRTA {
+    width: 700px;
+    height: 500px;
+    padding-top: 20px;
+}
+.works {
+    padding: 20px;
+}
+
+.filter-bar label {
+    padding: .4rem 1.25rem;
+    border: 1px solid rgb(60, 32, 32);
+    border-radius: 999px;
+    background color: rgb(255, 255, 255);
+    color: #110071;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background .15s, color .15s border-color .15s;
+}
+.filter-bar label:hover{
+    border-color:red ;
+}
+#cat-all:checked ~ .filter-bar label[for="cat-media"]
+#cat-all:checked ~ .filter-bar label[for="cat-coding"]
+#cat-all:checked ~ .filter-bar label[for="cat-all"]{
+    background :pink;
+    border: #c9a24a;
+    color: #fff;
+}
+
+
+#cat-all:focus-visible ~ .filter-bar label[for="cat-all"],
+#cat-media:focus-visible ~ .filter-bar label[for="cat-media"],
+#cat-coding:focus-visible ~ .filter-bar label[for="cat-coding"],{
+    outline :3px solid #2c5f8a;
+    outline-offset: 2px;
+}
+
+#cat-coding:checked ~ .worklist .work:not(data-category="coding"),
+#cat-media:checked ~ .worklist .work:not(data-category="media"),{
+    display: none;
+}
